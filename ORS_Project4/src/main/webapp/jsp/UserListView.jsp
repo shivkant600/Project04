@@ -15,7 +15,7 @@
 <link rel="icon" type="image/png"
 	href="<%=ORSView.APP_CONTEXT%>/img/logo.png" sizes="16*16" />
 
-<title>User List</title>
+<title>User List 1</title>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
@@ -49,7 +49,11 @@
 		<center>
 
 			<div align="center">
+<<<<<<< HEAD
 				<h1>User List</h1>
+=======
+				<h1>User List </h1>
+>>>>>>> 539a7dc46e97fad335d21b9af08353714b3e724c
 				<h3>
 					<font color="red"><%=ServletUtility.getErrorMessage(request)%></font>
 					<font color="green"><%=ServletUtility.getSuccessMessage(request)%></font>
