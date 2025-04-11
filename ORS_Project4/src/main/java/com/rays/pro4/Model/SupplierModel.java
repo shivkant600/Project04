@@ -1,6 +1,7 @@
 package com.rays.pro4.Model;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -259,10 +260,11 @@ public class SupplierModel {
 				sql.append(" AND category like '" + bean.getCategory() + "%'");
 			}
 
-			if (bean.getSupplierDate() != null && bean.getSupplierDate().getDate() > 0) {
-				sql.append(" AND supplier_date = " + bean.getSupplierDate());
+			if (bean.getSupplierDate() != null && bean.getSupplierDate().getTime() > 0) {
+				Date d = new Date(bean.getSupplierDate().getTime());
+				sql.append(" AND supplier_date = '" + d + "'");
+				System.out.println("done");
 			}
-
 		}
 
 		if (pageSize > 0) {

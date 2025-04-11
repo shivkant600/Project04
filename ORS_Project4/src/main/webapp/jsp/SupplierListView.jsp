@@ -22,8 +22,25 @@
 <script src="<%=ORSView.APP_CONTEXT%>/js/Checkbox11.js"></script>
 
 
+
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$("#udate").datepicker({
+			changeMonth : true,
+			changeYear : true,
+			yearRange : '1980:2002',
+		//  mindefaultDate : "01-01-1962"
+		});
+	});
+</script>
+
 </head>
 <body>
+	
 
 	<jsp:useBean id="cbean" class="com.rays.pro4.Bean.SupplierBean"
 		scope="request"></jsp:useBean>
@@ -58,21 +75,25 @@
 					<td align="center"><label align="center">Name:</label> <input
 						type="text" name="name" placeholder="Enter Name" Size="25"
 						value="<%=ServletUtility.getParameter("name", request)%>">
-						&nbsp; <label align="center">Payment: </label> <input type="text"
+						&nbsp; <label align=left>Payment: </label> <input type="text"
 						name="payment" placeholder="Enter Payment" Size="25"
 						value="<%=ServletUtility.getParameter("payment", request)%>">
-						&nbsp;
-						<label align="center">Category: </label>
-						
-						<%
-							HashMap map = new HashMap();
-							map.put("Plastic", "Plastic");
-							map.put("Iron", "Iron");
-							map.put("PVC", "PVC");
+						&nbsp; <label align="left">Category: </label> <%
+ 	HashMap map = new HashMap();
+ 		map.put("Plastic", "Plastic");
+ 		map.put("Iron", "Iron");
+ 		map.put("PVC", "PVC");
 
-							String hlist = HTMLUtility.getList("category", String.valueOf(cbean.getCategory()), map);
-						%> <%=hlist%>
-						&nbsp; <input type="submit" name="operation"
+ 		String hlist = HTMLUtility.getList("category", String.valueOf(cbean.getCategory()), map);
+ %> <%=hlist%> &nbsp;
+ 
+ 					<td align="left"><label align="left">Date:</label> <input
+						type="text" name="dob" placeholder="Enter DAte" id="udate" Size="25"
+						value="<%=ServletUtility.getParameter("dob", request)%>"> 
+ 					
+ 
+ 
+  <input type="submit" name="operation"
 						value="<%=SupplierListCtl.OP_SEARCH%>"> <input
 						type="submit" name="operation"
 						value="<%=SupplierListCtl.OP_RESET%>"></td>
