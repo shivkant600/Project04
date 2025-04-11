@@ -46,6 +46,8 @@ public interface ORSView {
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
 	public String COMPENSATION_LIST_VIEW = PAGE_FOLDER + "/CompensationListView.jsp";
 	public String COMPENSATION_VIEW = PAGE_FOLDER + "/CompensationView.jsp";
+	public String SUPPLIER_VIEW = PAGE_FOLDER + "/SupplierView.jsp";
+	public String SUPPLIER_LIST_VIEW = PAGE_FOLDER + "/SupplierListView.jsp";
 	// public String ERROR_VIEW5 = PAGE_FOLDER + "/ErrorView5.jsp";
 
 	public String PATIENT_VIEW = PAGE_FOLDER + "/PatientView.jsp";
@@ -88,4 +90,6 @@ public interface ORSView {
 
 	public String COMPENSATION_CTL = APP_CONTEXT + "/ctl/CompensationCtl";
 	public String COMPENSATION_LIST_CTL = APP_CONTEXT + "/ctl/CompensationListCtl";
+	public String SUPPLIER_CTL = APP_CONTEXT + "/ctl/SupplierCtl";
+	public String SUPPLIER_LIST_CTL = APP_CONTEXT + "/ctl/SupplierListCtl";
 }
