@@ -144,7 +144,7 @@ public class LoginCtl extends BaseCtl {
 					if (rolebean != null) {
 						session.setAttribute("role", rolebean.getName());
 					}
-
+   
 					if ("null".equalsIgnoreCase(str)) {
 						ServletUtility.redirect(ORSView.WELCOME_CTL, request, response);
 						return;

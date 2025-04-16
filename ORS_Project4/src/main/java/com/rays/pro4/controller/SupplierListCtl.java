@@ -73,6 +73,7 @@ public class SupplierListCtl extends BaseCtl {
      //   String[] ids = request.getParameterValues("ids");
 
         try {
+        	
             list = model.search(bean, pageNo, pageSize);
  //            ServletUtility.setList(list, request);
             if (list == null || list.size() == 0) {

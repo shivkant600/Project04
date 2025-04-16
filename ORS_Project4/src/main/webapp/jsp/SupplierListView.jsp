@@ -40,7 +40,7 @@
 
 </head>
 <body>
-	
+
 
 	<jsp:useBean id="cbean" class="com.rays.pro4.Bean.SupplierBean"
 		scope="request"></jsp:useBean>
@@ -80,20 +80,23 @@
 						value="<%=ServletUtility.getParameter("payment", request)%>">
 						&nbsp; <label align="left">Category: </label> <%
  	HashMap map = new HashMap();
- 		map.put("Plastic", "Plastic");
- 		map.put("Iron", "Iron");
- 		map.put("PVC", "PVC");
+ 		map.put("Electronics", "Electronics");
+ 		map.put("Furniture", "Furniture");
+ 		map.put("Clothing", "Clothing");
+ 		map.put("Food", "Food");
+ 		map.put("Stationery", "Stationery");
+ 		map.put("Books", "Books");
+ 		map.put("Tools", "Tools");
 
  		String hlist = HTMLUtility.getList("category", String.valueOf(cbean.getCategory()), map);
  %> <%=hlist%> &nbsp;
- 
- 					<td align="left"><label align="left">Date:</label> <input
-						type="text" name="dob" placeholder="Enter DAte" id="udate" Size="25"
-						value="<%=ServletUtility.getParameter("dob", request)%>"> 
- 					
- 
- 
-  <input type="submit" name="operation"
+					<td align="left"><label align="left">Date:</label> <input
+						type="text" name="dob" placeholder="Enter DAte" id="udate"
+						Size="25" value="<%=ServletUtility.getParameter("dob", request)%>">
+
+
+
+						<input type="submit" name="operation"
 						value="<%=SupplierListCtl.OP_SEARCH%>"> <input
 						type="submit" name="operation"
 						value="<%=SupplierListCtl.OP_RESET%>"></td>

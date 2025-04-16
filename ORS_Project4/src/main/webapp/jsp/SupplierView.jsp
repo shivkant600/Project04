@@ -101,9 +101,14 @@
 					<td>
 						<%
 							HashMap map = new HashMap();
-							map.put("Plastic", "Plastic");
-							map.put("Iron", "Iron");
-							map.put("PVC", "PVC");
+							map.put("Electronics", "Electronics");
+							map.put("Furniture", "Furniture");
+							map.put("Clothing", "Clothing");
+							map.put("Food", "Food");
+							map.put("Stationery", "Stationery");
+							map.put("Books", "Books");
+							map.put("Tools", "Tools");
+						
 
 							String hlist = HTMLUtility.getList("category", String.valueOf(bean.getCategory()), map);
 						%> <%=hlist%>

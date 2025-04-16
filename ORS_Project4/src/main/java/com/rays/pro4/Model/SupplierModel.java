@@ -274,7 +274,7 @@ public class SupplierModel {
 			sql.append(" Limit " + pageNo + ", " + pageSize);
 			// sql.append(" limit " + pageNo + "," + pageSize);
 		}
-
+		System.out.println("sql query search >>= " + sql.toString());
 		ArrayList list = new ArrayList();
 		Connection conn = null;
 		try {
